@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { PropsWithChildren } from 'react';
 import { Col } from 'antd';
 import * as S from './NFTCardHeader.styles';
 
@@ -6,7 +6,7 @@ interface NFTCardHeaderProps {
   title: string;
 }
 
-export const NFTCardHeader: React.FC<NFTCardHeaderProps> = ({ title, children }) => {
+export const NFTCardHeader: React.FC<PropsWithChildren<NFTCardHeaderProps>> = ({ title, children }) => {
   return (
     <S.WrapperRow justify="space-between">
       <Col>

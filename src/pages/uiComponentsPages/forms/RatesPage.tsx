@@ -30,8 +30,8 @@ const RatesPage: React.FC = () => {
         </S.Card>
         <S.Card title={t('rates.customIcons')}>
           <Space direction="vertical" size={10}>
-            <Rate defaultValue={2} character={({ index }: { index: number }) => index + 1} />
-            <Rate defaultValue={3} character={({ index }: { index: number }) => customIcons[index + 1]} />
+            <Rate defaultValue={2} character={({ index }) => (index as number) + 1} />
+            <Rate defaultValue={3} character={({ index }) => customIcons[(index as number) + 1]} />
           </Space>
         </S.Card>
       </Col>
